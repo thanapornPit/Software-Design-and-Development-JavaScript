@@ -168,10 +168,36 @@ let person = {
 
 ### บันทึกผลการทดลอง 2.1
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ข้อมูลนักศึกษา</title>
+</head>
+<body>
+    <p><strong>รหัสนักศึกษา:</strong> <span id="studentID"></span></p>
+    <p><strong>ชื่อนักศึกษา:</strong> <span id="studentName"></span></p>
+    <p><strong>คะแนนสอบกลางภาค:</strong> <span id="midtermScore"></span></p>
+    <p><strong>คะแนนสอบปลายภาค:</strong> <span id="finalScore"></span></p>
+
+    <script>
+        let student = {
+            id: "67030299",
+            name: "ธนพร พิศมัย",
+            midterm: 88,
+            final: 90
+        };
+
+        document.getElementById("studentID").innerText = student.id;
+        document.getElementById("studentName").innerText = student.name;
+        document.getElementById("midtermScore").innerText = student.midterm;
+        document.getElementById("finalScore").innerText = student.final;
+    </script>
+</body>
+</html>
 ```
 [รูปผลการทดลองที่ 2.1]
-
+![Screenshot 2025-02-27 001351](https://github.com/user-attachments/assets/369789f1-5809-4481-830b-37ba0f790528)
 
 ### 2.2 การดำเนินการทางคณิตศาสตร์
 
