@@ -247,10 +247,74 @@ number /= 2;          // เท่ากับ number = number / 2
 2. เขียนโปรแกรม กำหนดชื่อสินค้า ราคาสินค้า คำนวณราคาสินค้าที่รวม VAT 7% แล้วแสดงผลการคำนวณ
 
 ### บันทึกผลการทดลอง 2.2
+#หาค่าคะแนนเฉลี่ย
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>คำนวณคะแนนเฉลี่ย</title>
+</head>
+<body>
+    <h2>คำนวณคะแนนเฉลี่ย</h2>
+
+<p>คะแนนวิชาที่ 1: <span id="score1"></span></p>
+<p>คะแนนวิชาที่ 2: <span id="score2"></span></p>
+<p>คะแนนวิชาที่ 3: <span id="score3"></span></p>
+
+<h3>คะแนนเฉลี่ย: <span id="averageScore">-</span></h3>
+
+<script>
+    let score1 = 75;
+    let score2 = 90;
+    let score3 = 80;
+
+    let average = (score1 + score2 + score3) / 3;
+
+    document.getElementById("score1").innerText = score1;
+    document.getElementById("score2").innerText = score2;
+    document.getElementById("score3").innerText = score3;
+
+    document.getElementById("averageScore").innerText = average.toFixed(2);
+</script>
+</body>
+</html>
+```
+#คำนวณราคาสินค้า
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>คำนวณราคาสินค้า</title>
+</head>
+<body>
+    <h2>คำนวณราคาสินค้า</h2>
+
+    <p><strong>ชื่อสินค้า :</strong> <span id="productName"></span></p>
+    <p><strong>ราคาสินค้า :</strong> <span id="productPrice"></span> บาท</p>
+    <h3>ราคาสินค้าหลังรวม VAT 7% : <span id="priceWithVAT">-</span> บาท</h3>
+    
+    <script>
+    
+        let productName = "น้ำหอม";
+        let productPrice = 1400;
+    
+        let vatRate = 0.07; // 7% VAT
+        let priceWithVAT = productPrice + (productPrice * vatRate);
+    
+        document.getElementById("productName").innerText = productName;
+        document.getElementById("productPrice").innerText = productPrice;
+    
+        document.getElementById("priceWithVAT").innerText = priceWithVAT.toFixed(2);
+</script>
+</body>
+</html>
 ```
 [รูปผลการทดลองที่ 2.2]
+![Screenshot 2025-02-27 003111](https://github.com/user-attachments/assets/789ed840-6fc5-4b01-9cc5-6890c78e6878)
+![Screenshot 2025-02-27 003648](https://github.com/user-attachments/assets/225f4b1a-b17d-43cf-850b-bad58c8b73b0)
+
 
 ### 2.3 การควบคุมการทำงาน
 
