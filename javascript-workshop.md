@@ -1111,9 +1111,64 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ระบบจองห้องพักออนไลน์</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>ระบบจองห้องพักออนไลน์</title> 
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif; 
+            max-width: 600px; 
+            margin: 0 auto;
+            padding: 20px; 
+            background: linear-gradient(to right, #74ebd5, #acb6e5); /* พื้นหลังแบบไล่สี */
+        }
+
+        h1 {
+            color: #fff; 
+            text-align: center; 
+            margin-bottom: 30px; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ข้อความ */
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 25px; 
+            border-radius: 12px; /* ทำให้มุมโค้งมน */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+        }
+
+        label {
+            display: block; 
+            margin-bottom: 5px; 
+            color: #2c3e50; 
+            font-weight: bold; /* ทำให้ตัวอักษรหนา */
+        }
+
+        input, select {
+            width: 100%; /* ขยายความกว้างเต็มบรรทัด */
+            padding: 10px; /* เพิ่มขนาดของช่องกรอกข้อมูล */
+            border: 1px solid #ddd; 
+            border-radius: 6px; /* ทำให้มุมโค้งมน */
+        }
+
+        button {
+            background: linear-gradient(to right, #2980b9, #6dd5fa); /* ใช้สีไล่เฉด */
+            color: white; 
+            padding: 12px 20px; 
+            border: none; /* เอาขอบออก */
+            border-radius: 6px; /* ทำให้มุมโค้งมน */
+            width: 100%; 
+            font-size: 18px; 
+            font-weight: bold; 
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px; 
+            }
+        }
+    </style>
+</head>
 <body>
     <h1>แบบฟอร์มจองห้องพัก</h1>
     
@@ -1160,181 +1215,7 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 
         <button type="submit">จองห้องพัก</button>
     </form>
-
-    <style>
-
-        body {
-            font-family: 'Sarabun', sans-serif;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background: linear-gradient(to right, #74ebd5, #acb6e5); /* เพิ่มสีไล่ระดับ */
-        }
-
-        h1 {
-            color: #fff; /* เปลี่ยนสี */
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ตัวอักษร */
-        }
-
-        form {
-            background: rgba(255, 255, 255, 0.9); 
-            padding: 25px;
-            border-radius: 12px; /* ปรับมุมให้โค้งมนขึ้น */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาที่ชัดขึ้น */
-            transition: transform 0.3s ease-in-out;
-        }
-
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #2c3e50;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            transition: all 0.3s ease-in-out;
-        }
-
-        button {
-            background: linear-gradient(to right, #2980b9, #6dd5fa); /* ใช้การไล่เฉดสี */
-            color: white;
-            padding: 12px 20px;
-            border: none;/* ลบเส้นขอบของปุ่ม */
-            border-radius: 6px;
-            width: 100%;
-            font-size: 18px;
-            font-weight: bold;/* ทำให้ตัวอักษรหนา */
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-        }
-    </style>
-</head>
-</html>
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ระบบจองห้องพักออนไลน์</title>
-<body>
-    <h1>แบบฟอร์มจองห้องพัก</h1>
-    
-    <form id="bookingForm">
-        <div>
-            <label for="fullname">ชื่อ-นามสกุล:</label>
-            <input type="text" id="fullname" name="fullname" required>
-        </div>
-
-        <div>
-            <label for="email">อีเมล:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <div>
-            <label for="phone">เบอร์โทรศัพท์:</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
-
-        <div>
-            <label for="checkin">วันที่เช็คอิน:</label>
-            <input type="date" id="checkin" name="checkin" required>
-        </div>
-
-        <div>
-            <label for="checkout">วันที่เช็คเอาท์:</label>
-            <input type="date" id="checkout" name="checkout" required>
-        </div>
-
-        <div>
-            <label for="roomtype">ประเภทห้องพัก:</label>
-            <select id="roomtype" name="roomtype" required>
-                <option value="">กรุณาเลือกประเภทห้องพัก</option>
-                <option value="standard">ห้องมาตรฐาน</option>
-                <option value="deluxe">ห้องดีลักซ์</option>
-                <option value="suite">ห้องสวีท</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="guests">จำนวนผู้เข้าพัก:</label>
-            <input type="number" id="guests" name="guests" min="1" max="4" required>
-        </div>
-
-        <button type="submit">จองห้องพัก</button>
-    </form>
-
-    <style>
-
-        body {
-            font-family: 'Sarabun', sans-serif;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background: linear-gradient(to right, #74ebd5, #acb6e5); /* เพิ่มสีไล่ระดับ */
-        }
-
-        h1 {
-            color: #fff; /* เปลี่ยนสี */
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ตัวอักษร */
-        }
-
-        form {
-            background: rgba(255, 255, 255, 0.9); 
-            padding: 25px;
-            border-radius: 12px; /* ปรับมุมให้โค้งมนขึ้น */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาที่ชัดขึ้น */
-            transition: transform 0.3s ease-in-out;
-        }
-
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #2c3e50;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            transition: all 0.3s ease-in-out;
-        }
-
-        button {
-            background: linear-gradient(to right, #2980b9, #6dd5fa); /* ใช้การไล่เฉดสี */
-            color: white;
-            padding: 12px 20px;
-            border: none;/* ลบเส้นขอบของปุ่ม */
-            border-radius: 6px;
-            width: 100%;
-            font-size: 18px;
-            font-weight: bold;/* ทำให้ตัวอักษรหนา */
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-        }
-    </style>
-</head>
+</body>
 </html>
 
 ```
@@ -1444,9 +1325,190 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 
 ### บันทึกผลการทดลอง 3.2.3
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>ระบบจองห้องพักออนไลน์</title> 
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif; 
+            max-width: 600px; 
+            margin: 0 auto;
+            padding: 20px; 
+            background: linear-gradient(to right, #74ebd5, #acb6e5); /* พื้นหลังแบบไล่สี */
+        }
+
+        h1 {
+            color: #fff; 
+            text-align: center; 
+            margin-bottom: 30px; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ข้อความ */
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 25px; 
+            border-radius: 12px; /* ทำให้มุมโค้งมน */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+        }
+
+        label {
+            display: block; 
+            margin-bottom: 5px; 
+            color: #2c3e50; 
+            font-weight: bold; /* ทำให้ตัวอักษรหนา */
+        }
+
+        input, select {
+            width: 100%; /* ขยายความกว้างเต็มบรรทัด */
+            padding: 10px; /* เพิ่มขนาดของช่องกรอกข้อมูล */
+            border: 1px solid #ddd; 
+            border-radius: 6px; /* ทำให้มุมโค้งมน */
+        }
+
+        button {
+            background: linear-gradient(to right, #2980b9, #6dd5fa); /* ใช้สีไล่เฉด */
+            color: white; 
+            padding: 12px 20px; 
+            border: none; /* เอาขอบออก */
+            border-radius: 6px; /* ทำให้มุมโค้งมน */
+            width: 100%; 
+            font-size: 18px; 
+            font-weight: bold; 
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>แบบฟอร์มจองห้องพัก</h1>
+    
+    <form id="bookingForm">
+        <div>
+            <label for="fullname">ชื่อ-นามสกุล:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div>
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="phone">เบอร์โทรศัพท์:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div>
+            <label for="checkin">วันที่เช็คอิน:</label>
+            <input type="date" id="checkin" name="checkin" required>
+        </div>
+
+        <div>
+            <label for="checkout">วันที่เช็คเอาท์:</label>
+            <input type="date" id="checkout" name="checkout" required>
+        </div>
+
+        <div>
+            <label for="roomtype">ประเภทห้องพัก:</label>
+            <select id="roomtype" name="roomtype" required>
+                <option value="">กรุณาเลือกประเภทห้องพัก</option>
+                <option value="standard">ห้องมาตรฐาน</option>
+                <option value="deluxe">ห้องดีลักซ์</option>
+                <option value="suite">ห้องสวีท</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="guests">จำนวนผู้เข้าพัก:</label>
+            <input type="number" id="guests" name="guests" min="1" max="4" required>
+        </div>
+
+        <button type="submit">จองห้องพัก</button>
+    </form>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // ตรวจสอบวันที่
+            const checkin = new Date(document.getElementById('checkin').value);
+            const checkout = new Date(document.getElementById('checkout').value);
+            const today = new Date();
+            
+            if (checkin < today) {
+                alert('กรุณาเลือกวันเช็คอินที่ยังไม่ผ่านมา');
+                return;
+            }
+            
+            if (checkout <= checkin) {
+                alert('วันเช็คเอาท์ต้องมาหลังวันเช็คอิน');
+                return;
+            }
+            
+            // ตรวจสอบรูปแบบเบอร์โทร
+            const phone = document.getElementById('phone').value;
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง (10 หลัก)');
+                return;
+            }
+            
+            // คำนวณจำนวนวันที่พัก
+            const days = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+            
+            // แสดงสรุปการจอง
+            const roomtype = document.getElementById('roomtype');
+            const roomtypeText = roomtype.options[roomtype.selectedIndex].text;
+            
+            const summary = `
+                สรุปการจอง:
+                - ชื่อผู้จอง: ${document.getElementById('fullname').value}
+                - ประเภทห้อง: ${roomtypeText}
+                - วันที่เข้าพัก: ${checkin.toLocaleDateString('th-TH')}
+                - วันที่ออก: ${checkout.toLocaleDateString('th-TH')}
+                - จำนวนวันที่พัก: ${days} วัน
+                - จำนวนผู้เข้าพัก: ${document.getElementById('guests').value} ท่าน
+            `;
+            
+            if (confirm(summary + '\n\nยืนยันการจองห้องพัก?')) {
+                alert('จองห้องพักเรียบร้อยแล้ว');
+                this.reset();
+            }
+        });
+    
+        // เพิ่มการตรวจสอบวันที่แบบ Real-time
+        document.getElementById('checkin').addEventListener('change', function() {
+            document.getElementById('checkout').min = this.value;
+        });
+    
+        // จำกัดจำนวนผู้เข้าพักตามประเภทห้อง
+        document.getElementById('roomtype').addEventListener('change', function() {
+            const guestsInput = document.getElementById('guests');
+            if (this.value === 'standard') {
+                guestsInput.max = 2;
+            } else if (this.value === 'deluxe') {
+                guestsInput.max = 3;
+            } else if (this.value === 'suite') {
+                guestsInput.max = 4;
+            }
+            
+            if (guestsInput.value > guestsInput.max) {
+                guestsInput.value = guestsInput.max;
+            }
+        });
+    </script>
+</body>
+</html>
+
 ```
 [รูปผลการทดลองที่ 3.2.3]
+![Screenshot 2025-02-27 030835](https://github.com/user-attachments/assets/d711a1fc-6be2-48f8-a4e0-416cfbc4a5a2)
 
 
 ## คำแนะนำเพิ่มเติม
